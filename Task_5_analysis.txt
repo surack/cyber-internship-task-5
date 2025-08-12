@@ -1,0 +1,34 @@
+Task: Capture and Analyze Network Traffic using Wireshark
+
+Date: 12 August 2025
+
+Step 1: I started by installing Wireshark from the official website. During installation, I enabled Npcap for live packet capturing. This was necessary because without it, Wireshark cannot access my network interfaces.
+
+Step 2: I launched Wireshark and saw a list of interfaces. I selected my Wi-Fi interface because I was connected to the internet using Wi-Fi. 
+
+Step 3: I clicked the Start Capture button. At first, many packets started scrolling, even though I wasn’t doing anything. This showed background network activity such as DNS lookups and system updates.
+
+Step 4: To generate more noticeable traffic, I opened my web browser and visited a few sites like example.com, google.com, and Wikipedia. I also opened Command Prompt and ran `ping google.com` to generate ICMP packets.
+
+Step 5: I stopped the capture after around one minute. The list contained many protocols — TCP, UDP, DNS, TLS, and ICMP. 
+
+Step 6: Using the filter bar, I applied various filters:
+- `dns` showed requests from my PC to Google's DNS servers to resolve domain names.
+- `http` showed no plain HTTP traffic for Google because it uses HTTPS, but I found HTTP requests for example.com.
+- `tcp` displayed all TCP session packets.
+- `icmp` displayed the ping requests and replies with sequence numbers.
+
+Step 7: I saved my capture.
+
+Why I did each step:
+- Capturing was needed to observe how my device and external servers communicate.
+- Generating traffic made it easier to spot patterns.
+- Filtering was essential to isolate specific protocol traffic.
+- Saving the file helps with later analysis and submission.
+
+Observations:
+- HTTPS encrypts the payload but still shows TCP handshakes.
+- DNS requests are visible in plain text, revealing the domain names I visited.
+- ICMP packets are very easy to identify by their simple request/reply pattern.
+
+Overall, this task helped me understand how various network protocols work together and how Wireshark can break down complex network activity into readable form.
