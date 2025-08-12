@@ -1,6 +1,6 @@
 Task: Capture and Analyze Network Traffic using Wireshark
 
-Date: 12 August 2025
+Date: 11 August 2025
 
 Step 1: I started by installing Wireshark from the official website. During installation, I enabled Npcap for live packet capturing. This was necessary because without it, Wireshark cannot access my network interfaces.
 
